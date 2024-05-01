@@ -18,6 +18,25 @@ class TopicsTableSeeder extends Seeder
             'description' => 'Learn about the structure of the Bible.',
         ]);
 
-        // Add more topics as needed
+        Topic::create([
+            'title' => 'Books of the Bible',
+            'description' => 'Explore the different books in the Bible.',
+        ]);
+
+        Topic::create([
+            'title' => 'Biblical Characters',
+            'description' => 'Discover the characters mentioned in the Bible.',
+        ]);
+
+        Topic::create([
+            'title' => 'Biblical Stories',
+            'description' => 'Explore the stories told in the Bible.',
+        ]);
+
+        Topic::create([
+            'title' => 'Biblical Interpretation',
+            'description' => 'Learn about interpreting the Bible.',
+        ]);
     }
+
 }

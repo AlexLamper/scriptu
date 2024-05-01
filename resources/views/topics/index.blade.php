@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>List of Topics</h1>
-    <ul>
+    <h1 class="text-2xl font-bold mb-4">List of Topics</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         @foreach($topics as $topic)
-            <li>
-                <a href="{{ route('topics.show', $topic->id) }}">{{ $topic->title }}</a>
-                <p>{{ $topic->description }}</p>
-            </li>
+            <a href="{{ route('topics.show', $topic->id) }}" class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold text-blue-600 hover:underline">{{ $topic->title }}</h2>
+                    <p class="text-gray-500 mt-2">{{ $topic->description }}</p>
+                </div>
+            </a>
         @endforeach
-    </ul>
+    </div>
 @endsection
