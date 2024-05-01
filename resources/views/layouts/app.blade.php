@@ -27,9 +27,17 @@
                 </header>
             @endif
 
-            <!-- Page Content -->
-            <main>
-                @yield('content')
+            <!-- Page Content with Sidebar -->
+            <main class="flex">
+                <!-- Conditional Sidebar -->
+                @if (isset($showSidebar) && $showSidebar)
+                    @include('layouts.sidebar')
+                @endif
+
+                <!-- Main Content -->
+                <div class="flex-grow">
+                    @yield('content')
+                </div>
             </main>
         </div>
     </body>
