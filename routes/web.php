@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ChapterController;
+use App\Http\Controllers\SectionController;
+use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,6 +14,25 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::prefix('topics')->group(function () {
+    // Route to display all topics
+    Route::get('/', [TopicController::class, 'index'])->name('topics.index');
+
+    // Route to display a specific topic and its sections
+    Route::get('/{topic}', [TopicController::class, 'show'])->name('topics.show');
+
+    // Routes for sections within a topic
+    Route::prefix('{topic}/sections')->group(function () {
+        // Route to display a specific section
+        Route::get('/{section}', [SectionController::class, 'show'])->name('sections.show');
+
+        // Routes for chapters within a section
+        Route::prefix('{section}/chapters')->group(function () {
+            // Route to display a specific chapter
+            Route::get('/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
+        });
+    });
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
