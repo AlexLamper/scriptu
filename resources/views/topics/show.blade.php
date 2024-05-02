@@ -1,20 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <h1>Topic: {{ $topic->title }}</h1>
-        <p>{{ $topic->description }}</p>
+    <div class="max-w-4xl px-4">
+        <h1 class="text-3xl font-bold mb-4">Topic: {{ $topic->title }}</h1>
+        <p class="mb-8">{{ $topic->description }}</p>
 
-        <h2>Sections</h2>
+        <h2 class="text-2xl font-semibold mb-4">Sections</h2>
         <ul>
             @foreach($topic->sections as $section)
-                <li>
-                    <a href="{{ route('sections.show', ['topic' => $topic->id, 'section' => $section->id]) }}">
+                <li class="mb-4">
+                    <a href="{{ route('sections.show', ['topic' => $topic->id, 'section' => $section->id]) }}"
+                       class="text-blue-600 hover:underline">
                         {{ $section->title }}
                     </a>
-                    <p>{{ $section->description }}</p>
+                    <p class="text-gray-700">{{ $section->description }}</p>
                 </li>
             @endforeach
         </ul>
     </div>
+
+    @php
+        $showSidebar = true;
+    @endphp
 @endsection

@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 
 class ChapterController extends Controller
 {
-    /**
-     * Display the specified resource.
-     */
-    public function show(Chapter $chapter)
+    public function show($chapterId)
     {
-        return view('chapters.show', compact('chapter')); // Pass the chapter data to the view
+        $chapter = Chapter::findOrFail($chapterId);
+        return view('chapters.show', compact('chapter'));
     }
 }

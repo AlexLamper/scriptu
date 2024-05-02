@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Section;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class SectionController extends Controller
 {
-    /**
-     * Display the specified resource.
-     */
-    public function show(Section $section)
+    public function show($sectionId)
     {
-        return view('sections.show', compact('section')); // Pass the section data to the view
+        $section = Section::findOrFail($sectionId);
+        $topics = Topic::all();
+        return view('sections.show', compact('section', 'topics'));
     }
 }

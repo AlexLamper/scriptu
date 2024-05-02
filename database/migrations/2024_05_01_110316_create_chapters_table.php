@@ -17,8 +17,6 @@ class CreateChaptersTable extends Migration
             $table->id();
             $table->foreignId('section_id')->constrained()->onDelete('cascade');
             $table->string('title');
-            $table->text('content')->nullable();
-            // Add more columns as needed
             $table->timestamps();
         });
     }

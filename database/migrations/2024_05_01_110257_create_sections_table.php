@@ -17,8 +17,6 @@ class CreateSectionsTable extends Migration
             $table->id();
             $table->foreignId('topic_id')->constrained()->onDelete('cascade');
             $table->string('title');
-            $table->text('description')->nullable();
-            // Add more columns as needed
             $table->timestamps();
         });
     }
