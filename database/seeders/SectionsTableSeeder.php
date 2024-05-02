@@ -17,18 +17,37 @@ class SectionsTableSeeder extends Seeder
         $topics = Topic::all();
 
         $topics->each(function ($topic) {
-            $sectionTitles = [
-                'First 5 books',
-                'Books 5-15',
-                'Books 15-23',
-                // Add more unique titles as needed for each topic
-                'Introduction',
-                'Overview',
-                'Key Concepts',
-                'Case Studies',
-                // Add more unique titles for the topic
-            ];
+            switch ($topic->id) {
+                case 1:
+                    // Sections for the first topic
+                    $sectionTitles = [
+                        'First 5 books',
+                        'Books 5-15',
+                        'Books 15-23',
+                        // Add more unique titles for the first topic
+                    ];
+                    break;
+                case 2:
+                    // Sections for the second topic
+                    $sectionTitles = [
+                        'Introduction to the topic',
+                        'Overview of key concepts',
+                        'Case studies',
+                        // Add more unique titles for the second topic
+                    ];
+                    break;
 
+
+                default:
+                    // Default sections for other topics
+                    $sectionTitles = [
+                        'Default section 1',
+                        'Default section 2',
+                        // Add more default section titles
+                    ];
+            }
+
+            // Create sections for the current topic
             foreach ($sectionTitles as $title) {
                 $topic->sections()->create(['title' => $title]);
             }

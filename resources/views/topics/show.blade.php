@@ -7,6 +7,7 @@
 
         <h2 class="text-2xl font-semibold mb-4">Sections</h2>
         <ul>
+            <!-- show.blade.php -->
             @foreach($topic->sections as $section)
                 <li class="mb-4">
                     <a href="{{ route('sections.show', ['topic' => $topic->id, 'section' => $section->id]) }}"
@@ -16,6 +17,7 @@
                     <p class="text-gray-700">{{ $section->description }}</p>
                 </li>
             @endforeach
+
         </ul>
     </div>
 

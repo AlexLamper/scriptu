@@ -11,4 +11,5 @@ class Chapter extends Model
     {
         return $this->belongsTo(Section::class);
     }
+
 }
