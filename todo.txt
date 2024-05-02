@@ -1,0 +1,3 @@
+- Update naming from 'Section' to 'Chapter' everywhere within the application.
+- Add a good layout/tree structure in the sidebar for quick overview of where you are within the application.
+- Add consistent styling at all pages.
