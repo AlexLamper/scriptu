@@ -15,6 +15,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/topics/{topic}/sections/{section}', [SectionController::class, 'show'])->name('sections.show');
+Route::get('/topics/{topic}/sections/{section}/chapters', [ChapterController::class, 'index'])->name('chapters.index');
 
 Route::prefix('topics')->group(function () {
     // Route to display all topics

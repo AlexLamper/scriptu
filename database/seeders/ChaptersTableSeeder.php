@@ -17,11 +17,9 @@ class ChaptersTableSeeder extends Seeder
         $sections = Section::all();
 
         $sections->each(function ($section) {
-            $section->chapters()->createMany([
-                ['title' => 'Genesis, the first book'],
-                ['title' => 'Exodus, the second book'],
-                // Add more chapters as needed for each section
-            ]);
+            for ($i = 1; $i <= 10; $i++) {
+                $section->chapters()->create(['title' => 'Chapter ' . $i]);
+            }
         });
     }
 }
