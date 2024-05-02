@@ -15,7 +15,6 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/topics/{topic}/sections/{section}', [SectionController::class, 'show'])->name('sections.show');
-Route::get('/topics/{topic}/sections/{section}/chapters', [ChapterController::class, 'index'])->name('chapters.index');
 
 Route::prefix('topics')->group(function () {
     // Route to display all topics
@@ -28,12 +27,6 @@ Route::prefix('topics')->group(function () {
     Route::prefix('{topic}/sections')->group(function () {
         // Route to display a specific section
         Route::get('/{section}', [SectionController::class, 'show'])->name('sections.show');
-
-        // Routes for chapters within a section
-        Route::prefix('{section}/chapters')->group(function () {
-            // Route to display a specific chapter
-            Route::get('/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
-        });
     });
 });
 Route::get('/dashboard', function () {

@@ -8,10 +8,13 @@ use Illuminate\Http\Request;
 
 class SectionController extends Controller
 {
-    public function show($sectionId)
+    public function show($topicId, $sectionId)
     {
         $section = Section::findOrFail($sectionId);
-        $topics = Topic::all();
-        return view('sections.show', compact('section', 'topics'));
+        $topic = $section->topic;
+        $topics = Topic::all(); // Fetch all topics if needed
+
+        return view('sections.show', compact('section', 'topic', 'topics'));
     }
+
 }

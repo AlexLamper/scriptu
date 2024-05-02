@@ -10,10 +10,4 @@ class Section extends Model
     {
         return $this->belongsTo(Topic::class);
     }
-
-    public function chapters()
-    {
-        return $this->hasMany(Chapter::class);
-    }
-
 }
