@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
-    public function sections()
+    public function chapters()
     {
-        return $this->hasMany(Section::class);
+        return $this->hasMany(Chapter::class);
     }
 }

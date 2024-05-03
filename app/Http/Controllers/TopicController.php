@@ -15,7 +15,7 @@ class TopicController extends Controller
 
     public function show(Topic $topic)
     {
-        $topic->load('sections');
+        $topic->load('chapters');
         $topics = Topic::all(); // Fetch all topics
         return view('topics.show', compact('topic', 'topics'));
     }

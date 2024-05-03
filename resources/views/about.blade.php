@@ -36,7 +36,7 @@
 <body class="antialiased bg-white">
     <x-app-layout>
         @section('content')
-        <!-- Hero Section -->
+        <!-- Hero Chapter -->
         <section class="hero is-fullheight section">
             <div class="hero-body">
                 <div class="container">

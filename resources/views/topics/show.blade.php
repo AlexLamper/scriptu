@@ -6,16 +6,16 @@
             <h1 class="text-3xl font-bold mb-4">Topic: {{ $topic->title }}</h1>
             <p class="mb-8">{{ $topic->description }}</p>
 
-            <h2 class="text-2xl font-semibold mb-4">Sections</h2>
+            <h2 class="text-2xl font-semibold mb-4">Chapters:</h2>
             <ul>
                 <!-- show.blade.php -->
-                @foreach($topic->sections as $section)
+                @foreach($topic->chapters as $chapter)
                     <li class="mb-4">
-                        <a href="{{ route('sections.show', ['topic' => $topic->id, 'section' => $section->id]) }}"
+                        <a href="{{ route('chapters.show', ['topic' => $topic->id, 'chapter' => $chapter->id]) }}"
                            class="text-blue-600 hover:underline">
-                            {{ $section->title }}
+                            {{ $chapter->title }}
                         </a>
-                        <p class="text-gray-700">{{ $section->description }}</p>
+                        <p class="text-gray-700">{{ $chapter->description }}</p>
                     </li>
                 @endforeach
 

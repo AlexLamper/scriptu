@@ -1,10 +1,11 @@
 <?php
 
+// Chapter.php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Section extends Model
+class Chapter extends Model
 {
     public function topic()
     {

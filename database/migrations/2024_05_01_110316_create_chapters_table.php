@@ -15,7 +15,7 @@ class CreateChaptersTable extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('section_id')->constrained()->onDelete('cascade');
+            $table->foreignId('topic_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->timestamps();
         });
@@ -31,4 +31,3 @@ class CreateChaptersTable extends Migration
         Schema::dropIfExists('chapters');
     }
 }
-
