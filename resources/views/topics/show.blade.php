@@ -24,6 +24,7 @@
     </div>
 
     @php
-        $showSidebar = true;
+        $showSidebar = false;
+        $showTopicsSidebar = true;
     @endphp
 @endsection

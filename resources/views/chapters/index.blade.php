@@ -15,5 +15,6 @@
 
     @php
         $showSidebar = true;
+        $showTopicsSidebar = false;
     @endphp
 @endsection
