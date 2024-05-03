@@ -12,9 +12,19 @@ class ChapterController extends Controller
     {
         $chapter = Chapter::findOrFail($chapterId);
         $topic = $chapter->topic;
-        $topics = Topic::all(); // Fetch all topics if needed
+        $topics = Topic::all();
 
-        return view('chapters.show', compact('chapter', 'topic', 'topics'));
+        $previousChapter = Chapter::where('topic_id', $topicId)
+            ->where('id', '<', $chapterId)
+            ->orderBy('id', 'desc')
+            ->first();
+
+        $nextChapter = Chapter::where('topic_id', $topicId)
+            ->where('id', '>', $chapterId)
+            ->orderBy('id', 'asc')
+            ->first();
+
+        return view('chapters.show', compact('topic', 'chapter', 'previousChapter', 'nextChapter'));
     }
 
 }
