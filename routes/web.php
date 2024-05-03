@@ -15,6 +15,8 @@ Route::get('/about', function () {
 
 Route::get('/topics/{topic}/chapters/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
 
+Route::get('/topics', [TopicController::class, 'index'])->name('topics.index');
+
 Route::prefix('topics')->group(function () {
     // Route to display all topics
     Route::get('/', [TopicController::class, 'index'])->name('topics.index');
@@ -28,6 +30,7 @@ Route::prefix('topics')->group(function () {
         Route::get('/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
     });
 });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
