@@ -1,7 +1,7 @@
-# Structure of the Bible: Books 5-15
+# Structure of the Bible: Books 5-15 [By Scriptu]
 
 ## Introduction
-This section covers the narrative and prophetic books of the Bible, spanning from Joshua to 2 Chronicles.
+This section <u>covers</u> the narrative and prophetic books of the **Bible**, spanning from Joshua to 2 Chronicles.
 
 ## Joshua
 Joshua recounts the Israelites' conquest of the Promised Land under Joshua's leadership, including the fall of Jericho and the division of the land among the tribes.

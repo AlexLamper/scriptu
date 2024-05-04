@@ -27,7 +27,7 @@
     <hr class="w-[93%] mx-auto">
 
     <div class="p-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div>
             <!-- Display all the content here where the markdown file get's displayed correctly with the current page. -->
             {!! $htmlContent !!}
         </div>

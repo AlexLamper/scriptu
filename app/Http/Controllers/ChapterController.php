@@ -13,10 +13,11 @@ class ChapterController extends Controller
     {
         $chapter = Chapter::findOrFail($chapterId);
 
-        // Ensure that the chapter's language and slug are not null
-        if (is_null($chapter->language) || is_null($chapter->slug)) {
-            abort(404, "Chapter language or slug is null");
-        }
+        $markdownContent = file_get_contents("C:/Projects/scriptu/resources/markdown/en/books_5-15.md");
+
+        // Parse Markdown content using Parsedown
+        $parsedown = new Parsedown();
+        $htmlContent = $parsedown->text($markdownContent);
 
         $topic = $chapter->topic;
         $topics = Topic::all();
@@ -30,13 +31,6 @@ class ChapterController extends Controller
             ->where('id', '>', $chapterId)
             ->orderBy('id', 'asc')
             ->first();
-
-        // Read Markdown content from the file
-        $markdownContent = File::get(resource_path("markdown" . DIRECTORY_SEPARATOR . "{$chapter->language}" . DIRECTORY_SEPARATOR . "{$chapter->slug}.md"));
-
-        // Parse Markdown content using Parsedown
-        $parsedown = new Parsedown();
-        $htmlContent = $parsedown->text($markdownContent);
 
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter'));
     }
