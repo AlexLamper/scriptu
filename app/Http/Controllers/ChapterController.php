@@ -15,7 +15,7 @@ class ChapterController extends Controller
         $currentChapterId = $chapter->id;
 
         $parsedown = new Parsedown();
-        $markdownContent = file_get_contents("C:/Projects/scriptu/resources/markdown/en/books_5-15.md");
+        $markdownContent = File::get(resource_path("markdown/en/books_5-15.md")); // Updated path using Laravel File facade
         $htmlContent = $parsedown->text($markdownContent);
 
         // Add inline styles for Markdown headings
@@ -39,5 +39,6 @@ class ChapterController extends Controller
 
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
     }
+
 
 }

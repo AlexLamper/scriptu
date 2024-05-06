@@ -15,7 +15,7 @@
         <!-- Sidebar Links -->
         <nav class="mt-2 flex-grow flex flex-col">
             @foreach($topic->chapters as $chapter)
-                <a href="{{ route('chapters.show', ['topic' => $topic->id, 'chapter' => $chapter->id]) }}" class="flex items-center text-gray-300 px-3 py-2 rounded-md text-sm font-medium {{ $chapter->id == $currentChapterId ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
+                <a href="{{ route('chapters.show', ['topic' => $topic->id, 'chapter' => $chapter->id]) }}" class="flex items-center text-gray-300 px-3 py-2 rounded-md text-sm font-medium {{ isset($currentChapterId) && $chapter->id == $currentChapterId ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
                     <!-- Add icon here -->
                     <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor">
                         <circle cx="10" cy="10" r="8" stroke-width="1.5"></circle>
