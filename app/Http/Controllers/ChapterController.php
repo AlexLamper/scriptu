@@ -12,6 +12,7 @@ class ChapterController extends Controller
     public function show($topicId, $chapterId)
     {
         $chapter = Chapter::findOrFail($chapterId);
+        $currentChapterId = $chapter->id;
 
         $parsedown = new Parsedown();
         $markdownContent = file_get_contents("C:/Projects/scriptu/resources/markdown/en/books_5-15.md");
@@ -36,7 +37,7 @@ class ChapterController extends Controller
             ->orderBy('id', 'asc')
             ->first();
 
-        return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter'));
+        return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
     }
 
 }
