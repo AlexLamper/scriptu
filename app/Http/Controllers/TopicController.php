@@ -16,9 +16,13 @@ class TopicController extends Controller
     public function show(Topic $topic)
     {
         $topic->load('chapters');
-        $topics = Topic::all(); // Fetch all topics
-        return view('topics.show', compact('topic', 'topics'));
+        $previousTopic = Topic::where('id', '<', $topic->id)->orderBy('id', 'desc')->first();
+        $topics = Topic::all();
+        return view('topics.show', compact('topic', 'previousTopic', 'topics'));
     }
 
-
+    public function previous()
+    {
+        return redirect()->route('topics.index');
+    }
 }

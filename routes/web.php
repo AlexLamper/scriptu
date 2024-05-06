@@ -14,6 +14,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/topics/{topic}/chapters/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
+Route::get('/topics/{topic}/previous', [TopicController::class, 'previous'])->name('topics.previous');
 
 Route::get('/topics', [TopicController::class, 'index'])->name('topics.index');
 

@@ -7,7 +7,7 @@
         </div>
 
         <!-- Current Topic -->
-        <div class="mt-5 mb-2 px-3 py-2 bg-gray-700 rounded-md text-sm font-medium">
+        <div class="mt-5 mb-2 px-8 py-2 bg-gray-700 rounded-md text-sm font-medium">
             <h2 class="text-white">Current Topic:</h2>
             <h3 class="text-gray-300">{{ $topic->title }}</h3>
         </div>

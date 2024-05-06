@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <div class="flex justify-between px-12 pt-6">
+        @if ($previousTopic)
+            <a href="{{ route('topics.previous', $topic) }}" class="text-white p-4 rounded-lg hover:bg-[#1F2937] bg-[#1F2937]">
+                &lt; All Topics
+            </a>
+        @else
+            <a href="{{ route('topics.index') }}" class="text-white p-4 rounded-lg hover:bg-[#1F2937] bg-[#1F2937]">
+                &lt; All Topics
+            </a>
+        @endif
+    </div>
+
     <div class="p-12">
         <div class="max-w-4xl px-4">
             <h1 class="text-3xl font-bold mb-4">Topic: {{ $topic->title }}</h1>
