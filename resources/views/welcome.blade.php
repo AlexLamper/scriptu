@@ -31,7 +31,7 @@
         <div class="container custom-margin-top p-6 bg-white" style="height: 60vh">
             <div class="flex flex-col items-center justify-center">
                 <div class="text-center">
-                    <h1 class="font-bold mb-2" style="font-size: 2.9rem; font-weight: bold; color: black">Welcome to Scriptu</h1>
+                    <h1 class="font-bold mb-2" style="font-size: 3.5rem; font-weight: bold; color: black">Welcome to Scriptu</h1>
                     <p class="text-gray-600 mb-6" style="font-size: 1.4rem;">The best online bible learning platform</p>
 
                     <!-- Input field -->

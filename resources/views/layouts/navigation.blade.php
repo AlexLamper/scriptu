@@ -12,13 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="color: black !important; font-weight: normal">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="font-weight: 600; color: #18181b !important; letter-spacing: 0.03rem; font-size: 1rem">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')" style="color: black !important; font-weight: normal">
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')" style="font-weight: 600; color: #18181b !important; letter-spacing: 0.03rem; font-size: 1rem">
                         {{ __('About') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('topics.index')" :active="request()->routeIs('topics.index')" style="color: black !important; font-weight: normal">
+                    <x-nav-link :href="route('topics.index')" :active="request()->routeIs('topics.index')" style="color: #18181b !important; font-weight: 600; letter-spacing: 0.03rem; font-size: 1rem">
                         {{ __('Topics') }}
                     </x-nav-link>
                 </div>
@@ -60,10 +60,10 @@
                     </x-dropdown>
                 @else
                     <div class="space-x-4">
-                        <x-nav-link :href="route('login')" class="px-3 py-2" style="color: #18181b !important;">
+                        <x-nav-link :href="route('login')" class="px-3 py-2" style="color: #18181b !important; font-weight: 600; letter-spacing: 0.03rem; font-size: 1rem">
                             {{ __('Log in') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('register')" class="px-3 py-2" style="color: #18181b !important;">
+                        <x-nav-link :href="route('register')" class="px-3 py-2" style="color: #18181b !important; font-weight: 600; letter-spacing: 0.03rem; font-size: 1rem">
                             {{ __('Register') }}
                         </x-nav-link>
                     </div>

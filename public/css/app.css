@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.otf') format('opentype');
+    /* Add additional font weights and styles as needed */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.ttf') format('opentype');
+    font-weight: 600; /* Semibold font weight */
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Gilroy', sans-serif;
+}

@@ -50,8 +50,8 @@
                             </p>
                             <p style="max-width: 80%; font-size: larger">Welcome to Focused Journey – your productivity companion. Stay focused, organized, and achieve your goals effortlessly. Perfect for students, professionals, and creatives alike. Say hello to efficiency, goodbye to distractions.</p>
                         </div>
-                        <div class="column">
-                            <img src="{{ asset('images/bible.svg') }}" alt="Bible">
+                        <div class="border-2 border-gray-300 rounded-xl p-8">
+                            <img src="{{ asset('images/about.svg') }}" alt="About Scriptu" class="h-64 w-auto">
                         </div>
                     </div>
                 </div>
