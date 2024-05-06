@@ -28,7 +28,6 @@
 
     <div class="p-12 max-w-[1400px]">
         <div class="markdown-container" style="overflow-x: auto; word-wrap: break-word;">
-            <!-- This markdown content must have a max width of the parent div with the border. -->
             {!! $htmlContent !!}
         </div>
     </div>

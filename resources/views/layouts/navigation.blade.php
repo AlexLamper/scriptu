@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border border-b border-gray-100" style="height: 100%; border-bottom: 1px solid #d6d6d6">
+<nav class="bg-white border border-b border-gray-100" style="height: 100%; border-bottom: 1px solid #d6d6d6">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -11,18 +11,17 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-gray-900">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="color: black !important; font-weight: normal">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')" style="color: black !important; font-weight: normal">
                         {{ __('About') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('topics.index')" :active="request()->routeIs('topics.index')">
+                    <x-nav-link :href="route('topics.index')" :active="request()->routeIs('topics.index')" style="color: black !important; font-weight: normal">
                         {{ __('Topics') }}
                     </x-nav-link>
                 </div>
-
 
             </div>
 
@@ -61,10 +60,10 @@
                     </x-dropdown>
                 @else
                     <div class="space-x-4">
-                        <x-nav-link :href="route('login')" class="px-3 py-2">
+                        <x-nav-link :href="route('login')" class="px-3 py-2" style="color: #18181b !important;">
                             {{ __('Log in') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('register')" class="px-3 py-2">
+                        <x-nav-link :href="route('register')" class="px-3 py-2" style="color: #18181b !important;">
                             {{ __('Register') }}
                         </x-nav-link>
                     </div>
