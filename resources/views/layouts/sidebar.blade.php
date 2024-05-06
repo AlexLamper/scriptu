@@ -1,4 +1,4 @@
-<aside class="bg-gray-800 min-h-screen">
+<aside class="bg-gray-800 min-h-screen min-w-64">
     <div class="flex flex-col items-center justify-between h-full mx-6">
         <!-- Logo or Site Title -->
         <div class="flex flex-col items-center mt-5">

@@ -26,12 +26,13 @@
 
     <hr class="w-[93%] mx-auto">
 
-    <div class="p-12">
-        <div>
-            <!-- Display all the content here where the markdown file get's displayed correctly with the current page. -->
+    <div class="p-12 max-w-[1400px]">
+        <div class="markdown-container" style="overflow-x: auto; word-wrap: break-word;">
+            <!-- This markdown content must have a max width of the parent div with the border. -->
             {!! $htmlContent !!}
         </div>
     </div>
+
 
     <div class="flex justify-between px-12 pb-6">
         @if ($previousChapter)
