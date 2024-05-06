@@ -21,7 +21,7 @@
             border-bottom: 1px solid gray;
         }
         .custom-margin-top {
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
@@ -46,7 +46,7 @@
                         <!-- Cards -->
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                             <!-- Card 1: Structure of the Bible -->
-                            <a href="#" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
+                            <a href="/topics/1/chapters/1" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                                 <div class="p-6">
                                     <h2 class="font-bold text-lg mb-2">Structure of the Bible</h2>
                                     <p class="text-gray-700">Learn about the organization and layout of the Bible, including its divisions, genres, and themes.</p>
@@ -54,7 +54,7 @@
                             </a>
 
                             <!-- Card 2: Books of the Bible -->
-                            <a href="#" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
+                            <a href="/topics/2/chapters/4" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                                 <div class="p-6">
                                     <h2 class="font-bold text-lg mb-2">Books of the Bible</h2>
                                     <p class="text-gray-700">Explore the individual books of the Bible, including their authors, content, and historical context.</p>
@@ -62,7 +62,7 @@
                             </a>
 
                             <!-- Card 3: Biblical Characters -->
-                            <a href="#" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
+                            <a href="/topics/3/chapters/7" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                                 <div class="p-6">
                                     <h2 class="font-bold text-lg mb-2">Biblical Characters</h2>
                                     <p class="text-gray-700">Discover the key figures in the Bible, their stories, and their significance in biblical history.</p>
@@ -70,7 +70,7 @@
                             </a>
 
                             <!-- Card 4: Biblical Stories -->
-                            <a href="#" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
+                            <a href="/topics/4/chapters/9" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                                 <div class="p-6">
                                     <h2 class="font-bold text-lg mb-2">Biblical Stories</h2>
                                     <p class="text-gray-700">Explore famous stories from the Bible, including parables, miracles, and lessons for life.</p>
@@ -78,7 +78,7 @@
                             </a>
 
                             <!-- Card 5: Biblical Interpretation -->
-                            <a href="#" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
+                            <a href="/topics/5/chapters/11" class="bg-gray-100 border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                                 <div class="p-6">
                                     <h2 class="font-bold text-lg mb-2">Biblical Interpretation</h2>
                                     <p class="text-gray-700">Learn about different approaches to interpreting the Bible, including historical, literary, and theological perspectives.</p>

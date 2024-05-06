@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="px-12 pt-6">
-        <h1 class="text-4xl mb-4">{{ $chapter->title }}</h1>
+        <h1 class="text-5xl my-6 mb-10 font-semibold">{{ $chapter->title }}</h1>
     </div>
 
     <div class="flex justify-between px-12 pb-6">

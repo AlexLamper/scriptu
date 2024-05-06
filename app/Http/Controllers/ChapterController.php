@@ -15,14 +15,8 @@ class ChapterController extends Controller
         $currentChapterId = $chapter->id;
 
         $parsedown = new Parsedown();
-        $markdownContent = File::get(resource_path("markdown/en/books_5-15.md")); // Updated path using Laravel File facade
+        $markdownContent = File::get(resource_path("markdown/en/structure_of_the_bible/introduction.md"));
         $htmlContent = $parsedown->text($markdownContent);
-
-        // Add inline styles for Markdown headings
-        $htmlContent = str_replace('<h2>', '<h2 class="text-2xl font-bold">', $htmlContent);
-
-        // Wrap content in <pre> tag to preserve spacing
-        $htmlContent = '<pre>' . $htmlContent . '</pre>';
 
         $topic = $chapter->topic;
         $topics = Topic::all();
@@ -36,6 +30,22 @@ class ChapterController extends Controller
             ->where('id', '>', $chapterId)
             ->orderBy('id', 'asc')
             ->first();
+
+        // Updated Markdown styling to make them work and display the styling as html content
+        $htmlContent = str_replace('<h1>', '<h1 class="text-4xl font-bold">', $htmlContent);
+        $htmlContent = str_replace('<h2>', '<h2 class="text-2xl font-bold">', $htmlContent);
+        $htmlContent = str_replace('<ul>', '', $htmlContent);
+        $htmlContent = str_replace('<ol>', '', $htmlContent);
+
+        // Wrap content in <pre> tag to preserve spacing
+        $htmlContent = '<pre>' . $htmlContent . '</pre>';
+
+
+
+
+
+
+
 
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
     }

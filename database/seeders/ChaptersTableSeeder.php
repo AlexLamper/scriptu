@@ -19,16 +19,21 @@ class ChaptersTableSeeder extends Seeder
         $topics->each(function ($topic) {
             switch ($topic->id) {
                 case 1:
-                    // Chapters for the first topic
+                    // Chapters for the first topic: Structure of the Bible
                     $chapterTitles = [
-                        'First 5 books',
-                        'Books 5-15',
-                        'Books 15-23',
-                        // Add more unique titles for the first topic
+                        'Introduction',
+                        'History of the Bible',
+                        'Divisions of the Bible (Old Testament and New Testament)',
+                        'Canonization of the Bible',
+                        'Languages of the Bible (Hebrew, Aramaic, Greek)',
+                        'Manuscripts and Translations',
+                        'Literary Genres in the Bible',
+                        'Major Themes in the Bible',
+                        'Theological Framework of the Bible'
                     ];
                     break;
                 case 2:
-                    // Chapters for the second topic
+                    // Chapters for the second topic: Books of the Bible
                     $chapterTitles = [
                         'Introduction to the topic',
                         'Overview of key concepts',
@@ -36,7 +41,33 @@ class ChaptersTableSeeder extends Seeder
                         // Add more unique titles for the second topic
                     ];
                     break;
-
+                case 3:
+                    // Chapters for the third topic: Biblical Characters
+                    $chapterTitles = [
+                        'Introduction to the topic',
+                        'Overview of key concepts',
+                        'Case studies',
+                        // Add more unique titles for the second topic
+                    ];
+                    break;
+                case 4:
+                    // Chapters for the fourth topic: Biblical Stories
+                    $chapterTitles = [
+                        'Introduction to the topic',
+                        'Overview of key concepts',
+                        'Case studies',
+                        // Add more unique titles for the second topic
+                    ];
+                    break;
+                case 5:
+                    // Chapters for the fifth topic: Biblical Interpretation
+                    $chapterTitles = [
+                        'Introduction to the topic',
+                        'Overview of key concepts',
+                        'Case studies',
+                        // Add more unique titles for the second topic
+                    ];
+                    break;
 
                 default:
                     // Default chapters for other topics
