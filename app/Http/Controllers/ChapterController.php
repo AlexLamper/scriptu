@@ -40,13 +40,6 @@ class ChapterController extends Controller
         // Wrap content in <pre> tag to preserve spacing
         $htmlContent = '<pre>' . $htmlContent . '</pre>';
 
-
-
-
-
-
-
-
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
     }
 
