@@ -29,7 +29,7 @@
                                     <div class="relative h-full">
                                         <!-- Top Div with Image -->
                                         <div class="inset-0 flex">
-                                            <img src="images/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                                         </div>
                                         <!-- Bottom Div with Text Content -->
                                         <div class="inset-0 flex flex-col justify-between">
@@ -51,7 +51,7 @@
                                     <div class="relative h-full">
                                         <!-- Top Div with Image -->
                                         <div class="inset-0 flex">
-                                            <img src="images/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                                         </div>
                                         <!-- Bottom Div with Text Content -->
                                         <div class="inset-0 flex flex-col justify-between">
@@ -73,7 +73,7 @@
                                     <div class="relative h-full">
                                         <!-- Top Div with Image -->
                                         <div class="inset-0 flex">
-                                            <img src="images/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                                         </div>
                                         <!-- Bottom Div with Text Content -->
                                         <div class="inset-0 flex flex-col justify-between">
@@ -95,7 +95,7 @@
                                     <div class="relative h-full">
                                         <!-- Top Div with Image -->
                                         <div class="inset-0 flex">
-                                            <img src="images/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                                         </div>
                                         <!-- Bottom Div with Text Content -->
                                         <div class="inset-0 flex flex-col justify-between">
@@ -117,7 +117,7 @@
                                     <div class="relative h-full">
                                         <!-- Top Div with Image -->
                                         <div class="inset-0 flex">
-                                            <img src="images/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                                         </div>
                                         <!-- Bottom Div with Text Content -->
                                         <div class="inset-0 flex flex-col justify-between">

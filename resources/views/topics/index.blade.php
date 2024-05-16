@@ -17,7 +17,7 @@
                         <img src="images/about1.jpg" alt="Image" class="absolute inset-0 w-full h-full object-cover rounded-t-lg" />
                     </div>
                     <div class="p-4">
-                        <h2 class="text-lg font-semibold text-[#1F2937] hover:underline">{{ $topic->title }}</h2>
+                        <h2 class="text-lg font-semibold hover:underline text-[#1F2937]">{{ $topic->title }}</h2>
                         <p class="text-gray-500 mt-2">{{ $topic->description }}</p>
                     </div>
                 </a>
