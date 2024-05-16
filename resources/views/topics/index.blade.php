@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'Scriptu | Courses')
 @section('content')
     <div class="p-12">
         @auth

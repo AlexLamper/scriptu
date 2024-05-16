@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'Scriptu | ' . $chapter->title)
 @section('content')
 
     <div class="px-12 pt-6">

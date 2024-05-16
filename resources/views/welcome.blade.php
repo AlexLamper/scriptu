@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Scriptu</title>
-    <!-- Bulma CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        #content {
-            flex: 1;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            width: 100%;
-        }
-
-        .card {
-            max-width: 100%;
-        }
-    </style>
-</head>
-<body class="antialiased">
 <x-app-layout>
+    @section('title', 'Scriptu | Home')
     @section('content')
         <div id="content">
             <div class="bg-transparent lg:max-w-[70%] mx-auto min-h-[70vh]">
@@ -183,5 +151,3 @@
         </div>
     @endsection
 </x-app-layout>
-</body>
-</html>

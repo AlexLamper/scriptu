@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'Scriptu | ' . $topic->title)
 @section('content')
 
     <div class="flex justify-between px-12 pt-6">
