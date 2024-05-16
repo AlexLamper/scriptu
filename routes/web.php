@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\TopicController;
@@ -31,6 +32,12 @@ Route::prefix('topics')->group(function () {
         Route::get('/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
     });
 });
+
+Route::get('/forum', [ForumController::class, 'index'])->name('forum.index');
+Route::get('/forum/create', [ForumController::class, 'create'])->name('forum.create');
+Route::get('/forum/{question}', [ForumController::class, 'show'])->name('forum.show');
+Route::post('/forum', [ForumController::class, 'store'])->name('forum.store');
+Route::post('/forum/{question}/answers', [ForumController::class, 'storeAnswer'])->name('forum.answer');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

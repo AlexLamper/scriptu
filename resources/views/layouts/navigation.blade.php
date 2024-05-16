@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('topics.index')" :active="request()->routeIs('topics.index')" style="color: #18181b !important; font-weight: 600; letter-spacing: 0.03rem; font-size: 1rem">
                         {{ __('Courses') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('forum.index')" :active="request()->routeIs('forum.index')" style="color: #18181b !important; font-weight: 600; letter-spacing: 0.03rem; font-size: 1rem">
+                        {{ __('Forum') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')" style="font-weight: 600; color: #18181b !important; letter-spacing: 0.03rem; font-size: 1rem">
                         {{ __('About') }}
                     </x-nav-link>
