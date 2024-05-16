@@ -32,7 +32,6 @@
         </div>
     </div>
 
-
     <div class="flex justify-between px-12 pb-6">
         @if ($previousChapter)
             <a href="{{ route('chapters.show', ['topic' => $topic->id, 'chapter' => $previousChapter->id]) }}" class="text-white p-4 rounded-lg hover:bg-[#1F2937] bg-[#1F2937]">

@@ -36,8 +36,6 @@ class ChapterController extends Controller
         $htmlContent = str_replace('<h2>', '<h2 class="text-2xl font-bold">', $htmlContent);
         $htmlContent = str_replace('<ul>', '', $htmlContent);
         $htmlContent = str_replace('<ol>', '', $htmlContent);
-
-        // Wrap content in <pre> tag to preserve spacing
         $htmlContent = '<pre>' . $htmlContent . '</pre>';
 
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
