@@ -14,7 +14,7 @@
             @foreach($topics as $topic)
                 <a href="{{ route('topics.show', $topic->id) }}" class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 sm:max-w-xs md:max-w-sm">
                     <div class="h-40 relative overflow-hidden">
-                        <img src="images/about1.jpg" alt="Image" class="absolute inset-0 w-full h-full object-cover rounded-t-lg" />
+                        <img src="images/courses/about1.jpg" alt="Image" class="absolute inset-0 w-full h-full object-cover rounded-t-lg" />
                     </div>
                     <div class="p-4">
                         <h2 class="text-lg font-semibold hover:underline text-[#1F2937]">{{ $topic->title }}</h2>

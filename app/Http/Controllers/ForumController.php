@@ -55,4 +55,23 @@ class ForumController extends Controller
 
         return back();
     }
+
+    public function upvoteQuestion(Question $question)
+    {
+        if (!$question->votes()->where('user_id', auth()->id())->exists()) {
+            $question->upvote();
+            return back()->with('success', 'You have upvoted this question.');
+        }
+        return back()->with('error', 'You have already upvoted this question.');
+    }
+
+    public function upvoteAnswer(Answer $answer)
+    {
+        if (!$answer->votes()->where('user_id', auth()->id())->exists()) {
+            $answer->upvote();
+            return back()->with('success', 'You have upvoted this answer.');
+        }
+        return back()->with('error', 'You have already upvoted this answer.');
+    }
+
 }

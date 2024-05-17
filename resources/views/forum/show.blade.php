@@ -1,16 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-2xl mx-auto mt-12">
+        @if (session('success'))
+            <div class="bg-green-500 text-white p-4 rounded mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="bg-red-500 text-white p-4 rounded mb-4">
+                {{ session('error') }}
+            </div>
+        @endif
+
         <h1 class="text-3xl font-bold mb-4">{{ $question->title }}</h1>
         <p>{{ $question->content }}</p>
         <p class="text-gray-600">Asked by {{ $question->user->name }}, {{ $question->created_at->diffForHumans() }}</p>
+
+        <!-- Upvote button for the question -->
+        <div class="flex items-center mt-4">
+            <form action="{{ route('forum.question.upvote', $question) }}" method="POST">
+                @csrf
+                <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
+            </form>
+            <span class="ml-2">{{ $question->upvotes }} Upvotes</span>
+        </div>
 
         <h2 class="text-2xl font-bold mt-8">Answers</h2>
         @foreach($question->answers as $answer)
             <div class="bg-gray-100 p-4 rounded-lg mt-4">
                 <p>{{ $answer->content }}</p>
                 <p class="text-gray-600">Answered by {{ $answer->user->name }}, {{ $answer->created_at->diffForHumans() }}</p>
+
+                <!-- Upvote button for the answer -->
+                <div class="flex items-center mt-4">
+                    <form action="{{ route('forum.answer.upvote', $answer) }}" method="POST">
+                        @csrf
+                        <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
+                    </form>
+                    <span class="ml-2">{{ $answer->upvotes }} Upvotes</span>
+                </div>
             </div>
         @endforeach
 

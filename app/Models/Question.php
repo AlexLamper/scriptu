@@ -18,4 +18,18 @@ class Question extends Model
     {
         return $this->hasMany(Answer::class);
     }
+
+    public function upvote()
+    {
+        if (!$this->votes()->where('user_id', auth()->id())->exists()) {
+            $this->votes()->create(['user_id' => auth()->id()]);
+            $this->increment('upvotes');
+        }
+    }
+
+    public function votes()
+    {
+        return $this->morphMany(Vote::class, 'votable');
+    }
+
 }

@@ -38,6 +38,8 @@ Route::get('/forum/create', [ForumController::class, 'create'])->name('forum.cre
 Route::get('/forum/{question}', [ForumController::class, 'show'])->name('forum.show');
 Route::post('/forum', [ForumController::class, 'store'])->name('forum.store');
 Route::post('/forum/{question}/answers', [ForumController::class, 'storeAnswer'])->name('forum.answer');
+Route::post('/forum/question/{question}/upvote', [ForumController::class, 'upvoteQuestion'])->name('forum.question.upvote');
+Route::post('/forum/answer/{answer}/upvote', [ForumController::class, 'upvoteAnswer'])->name('forum.answer.upvote');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
