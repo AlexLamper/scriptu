@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,6 +14,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/topics/{topic}/chapters/{chapter}', [ChapterController::class, 'show'])->name('chapters.show');
 Route::get('/topics/{topic}/previous', [TopicController::class, 'previous'])->name('topics.previous');

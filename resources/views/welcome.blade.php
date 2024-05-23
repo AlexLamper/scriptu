@@ -12,7 +12,7 @@
 
                         <div id="input" class="mb-12">
                             <label class="relative">
-                                <input type="text" class="border border-black px-5 py-3 font-semibold rounded-full w-80 focus:outline-none focus:border-blue-500" placeholder="Search our courses, e.g. Books">
+                                <input type="text" id="search" class="border border-black px-5 py-3 font-semibold rounded-full w-80 focus:outline-none focus:border-blue-500" placeholder="Search our courses, e.g. Books">
                                 <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-700">
                                     <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -21,120 +21,11 @@
                             </label>
                         </div>
 
-                        <div id="cards">
-                            <!-- Cards -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                <!-- Card 1: Structure of the Bible -->
-                                <a href="/topics/1/chapters/1" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
-                                    <div class="relative h-full">
-                                        <!-- Top Div with Image -->
-                                        <div class="inset-0 flex">
-                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
-                                        </div>
-                                        <!-- Bottom Div with Text Content -->
-                                        <div class="inset-0 flex flex-col justify-between">
-                                            <!-- Top Div within Bottom Div -->
-                                            <div class="h-30% flex pl-4 pt-4">
-                                                <p>Estimated Time: 4 hours</p>
-                                            </div>
-                                            <!-- Bottom Div within Bottom Div -->
-                                            <div class="h-70% flex flex-col py-4">
-                                                <h2 class="font-bold text-xl mb-2 px-4 text-left">Structure of the Bible</h2>
-                                                <p class="px-4 pb-4 text-left">Course Author: Alex Lamper</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!-- Card 2: Books of the Bible -->
-                                <a href="/topics/2/chapters/4" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
-                                    <div class="relative h-full">
-                                        <!-- Top Div with Image -->
-                                        <div class="inset-0 flex">
-                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
-                                        </div>
-                                        <!-- Bottom Div with Text Content -->
-                                        <div class="inset-0 flex flex-col justify-between">
-                                            <!-- Top Div within Bottom Div -->
-                                            <div class="h-30% flex pl-4 pt-4">
-                                                <p>Estimated Time: 2 hours</p>
-                                            </div>
-                                            <!-- Bottom Div within Bottom Div -->
-                                            <div class="h-70% flex flex-col py-4">
-                                                <h2 class="font-bold text-xl mb-2 px-4 text-left">Books of the Bible</h2>
-                                                <p class="px-4 pb-4 text-left">Explore the individual books of the Bible, including their authors, content, and historical context.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!-- Card 3: Biblical Characters -->
-                                <a href="/topics/3/chapters/7" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
-                                    <div class="relative h-full">
-                                        <!-- Top Div with Image -->
-                                        <div class="inset-0 flex">
-                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
-                                        </div>
-                                        <!-- Bottom Div with Text Content -->
-                                        <div class="inset-0 flex flex-col justify-between">
-                                            <!-- Top Div within Bottom Div -->
-                                            <div class="h-30% flex pl-4 pt-4">
-                                                <p>Estimated Time: 3 hours</p>
-                                            </div>
-                                            <!-- Bottom Div within Bottom Div -->
-                                            <div class="h-70% flex flex-col py-4">
-                                                <h2 class="font-bold text-xl mb-2 px-4 text-left">Biblical Characters</h2>
-                                                <p class="px-4 pb-4 text-left">Discover the key figures in the Bible, their stories, and their significance in biblical history.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!-- Card 4: Biblical Stories -->
-                                <a href="/topics/4/chapters/9" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
-                                    <div class="relative h-full">
-                                        <!-- Top Div with Image -->
-                                        <div class="inset-0 flex">
-                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
-                                        </div>
-                                        <!-- Bottom Div with Text Content -->
-                                        <div class="inset-0 flex flex-col justify-between">
-                                            <!-- Top Div within Bottom Div -->
-                                            <div class="h-30% flex pl-4 pt-4">
-                                                <p>Estimated Time: 2 hours</p>
-                                            </div>
-                                            <!-- Bottom Div within Bottom Div -->
-                                            <div class="h-70% flex flex-col py-4">
-                                                <h2 class="font-bold text-xl mb-2 px-4 text-left">Biblical Stories</h2>
-                                                <p class="px-4 pb-4 text-left">Explore famous stories from the Bible, including parables, miracles, and lessons for life.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!-- Card 5: Biblical Interpretation -->
-                                <a href="/topics/5/chapters/11" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
-                                    <div class="relative h-full">
-                                        <!-- Top Div with Image -->
-                                        <div class="inset-0 flex">
-                                            <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
-                                        </div>
-                                        <!-- Bottom Div with Text Content -->
-                                        <div class="inset-0 flex flex-col justify-between">
-                                            <!-- Top Div within Bottom Div -->
-                                            <div class="h-30% flex pl-4 pt-4">
-                                                <p>Estimated Time: 4 hours</p>
-                                            </div>
-                                            <!-- Bottom Div within Bottom Div -->
-                                            <div class="h-70% flex flex-col py-4">
-                                                <h2 class="font-bold text-xl mb-2 px-4 text-left">Biblical Interpretation</h2>
-                                                <p class="px-4 pb-4 text-left">Learn about different approaches to interpreting the Bible, including historical, literary, and theological perspectives.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                        <div id="results" class="mb-6">
+                            <!-- Search results will be displayed here -->
                         </div>
+
+                        @include('components.cards-homepage')
 
                         <!-- Link -->
                         <a href="#" class="underline text-blue-500 mt-8 block">Not sure where to start?</a>
@@ -149,5 +40,41 @@
                 </div>
             </div>
         </div>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#search').on('input', function() {
+                    let query = $(this).val();
+
+                    $.ajax({
+                        url: "{{ route('search') }}",
+                        type: "GET",
+                        data: { query: query },
+                        success: function(data) {
+                            $('#results').empty();
+                            if (data.topics.length || data.chapters.length) {
+                                if (data.topics.length) {
+                                    $('#results').append('<h2 class="font-semibold text-lg mb-2">Topics</h2>');
+                                    data.topics.forEach(topic => {
+                                        $('#results').append(`<p class="mb-1">${topic.name}</p>`);
+                                    });
+                                }
+                                if (data.chapters.length) {
+                                    $('#results').append('<h2 class="font-semibold text-lg mb-2">Chapters</h2>');
+                                    data.chapters.forEach(chapter => {
+                                        $('#results').append(`<p class="mb-1">${chapter.title}</p>`);
+                                    });
+                                }
+                            } else {
+                                $('#results').append('<p class="text-gray-600">No results found</p>');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
     @endsection
 </x-app-layout>
