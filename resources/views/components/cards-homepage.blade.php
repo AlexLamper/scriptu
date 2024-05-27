@@ -6,7 +6,7 @@
             <div class="relative h-full">
                 <!-- Top Div with Image -->
                 <div class="inset-0 flex">
-                    <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                    <img src="images/courses/cover1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
                 <div class="inset-0 flex flex-col justify-between">
@@ -17,7 +17,7 @@
                     <!-- Bottom Div within Bottom Div -->
                     <div class="h-70% flex flex-col py-4">
                         <h2 class="font-bold text-xl mb-2 px-4 text-left">Structure of the Bible</h2>
-                        <p class="px-4 pb-4 text-left">Course Author: Alex Lamper</p>
+                        <p class="px-4 pb-4 text-left">Get a better understanding of the structure of the bible. This course is a detailed explanation about how the bible is structured.</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="relative h-full">
                 <!-- Top Div with Image -->
                 <div class="inset-0 flex">
-                    <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                    <img src="images/courses/cover2.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
                 <div class="inset-0 flex flex-col justify-between">
@@ -50,7 +50,7 @@
             <div class="relative h-full">
                 <!-- Top Div with Image -->
                 <div class="inset-0 flex">
-                    <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                    <img src="images/courses/cover3.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
                 <div class="inset-0 flex flex-col justify-between">
@@ -72,7 +72,7 @@
             <div class="relative h-full">
                 <!-- Top Div with Image -->
                 <div class="inset-0 flex">
-                    <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                    <img src="images/courses/cover4.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
                 <div class="inset-0 flex flex-col justify-between">
@@ -94,7 +94,7 @@
             <div class="relative h-full">
                 <!-- Top Div with Image -->
                 <div class="inset-0 flex">
-                    <img src="images/courses/about1.jpg" alt="Course Image" class="w-full h-full object-cover" />
+                    <img src="images/courses/cover5.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
                 <div class="inset-0 flex flex-col justify-between">

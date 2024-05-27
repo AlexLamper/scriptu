@@ -19,10 +19,9 @@
                                     </svg>
                                 </span>
                             </label>
-                        </div>
-
-                        <div id="results" class="mb-6">
-                            <!-- Search results will be displayed here -->
+                            <div id="results" class="mb-6 bg-neutral-800 text-white w-80 mx-auto text-left">
+                                <!-- Search results will be displayed here -->
+                            </div>
                         </div>
 
                         @include('components.cards-homepage')
@@ -54,17 +53,20 @@
                         type: "GET",
                         data: { query: query },
                         success: function(data) {
-                            $('#results').empty();
-                            if (data.topics.length || data.chapters.length) {
-                                if (data.topics.length) {
+                            $('#results').empty().removeClass('hidden');
+                            let displayedTopics = data.topics.slice(0, 7);
+                            let displayedChapters = data.chapters.slice(0, 7);
+
+                            if (displayedTopics.length || displayedChapters.length) {
+                                if (displayedTopics.length) {
                                     $('#results').append('<h2 class="font-semibold text-lg mb-2">Topics</h2>');
-                                    data.topics.forEach(topic => {
+                                    displayedTopics.forEach(topic => {
                                         $('#results').append(`<p class="mb-1">${topic.name}</p>`);
                                     });
                                 }
-                                if (data.chapters.length) {
+                                if (displayedChapters.length) {
                                     $('#results').append('<h2 class="font-semibold text-lg mb-2">Chapters</h2>');
-                                    data.chapters.forEach(chapter => {
+                                    displayedChapters.forEach(chapter => {
                                         $('#results').append(`<p class="mb-1">${chapter.title}</p>`);
                                     });
                                 }
@@ -74,7 +76,14 @@
                         }
                     });
                 });
+
+                $(document).on('click', function(event) {
+                    if (!$(event.target).closest('#input').length) {
+                        $('#results').empty();
+                    }
+                });
             });
         </script>
+
     @endsection
 </x-app-layout>
