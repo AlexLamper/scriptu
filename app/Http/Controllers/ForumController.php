@@ -33,14 +33,19 @@ class ForumController extends Controller
             'content' => 'required',
         ]);
 
+        if (!Auth::check()) {
+            return redirect()->route('login')->with('error', 'You must login before you can ask a question. Click <a href="' . route('login') . '">here</a> to login.');
+        }
+
         $question = new Question();
         $question->title = $request->input('title');
         $question->content = $request->input('content');
-        $question->user_id = Auth::id(); // Get the currently authenticated user's ID
+        $question->user_id = Auth::id();
         $question->save();
 
         return redirect()->route('forum.show', $question);
     }
+
 
     public function storeAnswer(Question $question, Request $request)
     {
