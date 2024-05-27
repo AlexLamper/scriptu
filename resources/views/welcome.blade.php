@@ -61,13 +61,15 @@
                                 if (displayedTopics.length) {
                                     $('#results').append('<h2 class="font-semibold text-lg mb-2 pl-2">Topics</h2>');
                                     displayedTopics.forEach(topic => {
-                                        $('#results').append(`<p class="mb-1 pl-2">${topic.name}</p>`);
+                                        let topicUrl = "{{ url('topics') }}/" + topic.id; // Adjust the URL as per your route
+                                        $('#results').append(`<a href="${topicUrl}" class="block mb-1 pl-2">${topic.name}</a>`);
                                     });
                                 }
                                 if (displayedChapters.length) {
                                     $('#results').append('<h2 class="font-semibold text-lg mb-2 pl-2">Chapters</h2>');
                                     displayedChapters.forEach(chapter => {
-                                        $('#results').append(`<p class="mb-1 pl-2">${chapter.title}</p>`);
+                                        let chapterUrl = "{{ url('topics') }}/" + chapter.topic_id + "/chapters/" + chapter.id; // Adjust the URL as per your route
+                                        $('#results').append(`<a href="${chapterUrl}" class="block mb-1 pl-2">${chapter.title}</a>`);
                                     });
                                 }
                             } else {
