@@ -19,10 +19,19 @@
 
         <!-- Upvote button for the question -->
         <div class="flex items-center mt-4">
-            <form action="{{ route('forum.question.upvote', $question) }}" method="POST">
-                @csrf
-                <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
-            </form>
+            @auth
+                <form action="{{ route('forum.question.upvote', $question) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
+                </form>
+            @else
+                <button type="button" class="bg-green-500 text-white px-3 py-1 rounded-md cursor-not-allowed relative group">
+                    Upvote
+                    <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 w-[10rem]">
+                        Please login to upvote this question
+                    </span>
+                </button>
+            @endauth
             <span class="ml-2">{{ $question->upvotes }} Upvotes</span>
         </div>
 
@@ -34,10 +43,19 @@
 
                 <!-- Upvote button for the answer -->
                 <div class="flex items-center mt-4">
-                    <form action="{{ route('forum.answer.upvote', $answer) }}" method="POST">
-                        @csrf
-                        <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
-                    </form>
+                    @auth
+                        <form action="{{ route('forum.answer.upvote', $answer) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">Upvote</button>
+                        </form>
+                    @else
+                        <button type="button" class="bg-green-500 text-white px-3 py-1 rounded-md cursor-not-allowed relative group">
+                            Upvote
+                            <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 text-center px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 w-[10rem]">
+                                Please login to upvote this answer
+                            </span>
+                        </button>
+                    @endauth
                     <span class="ml-2">{{ $answer->upvotes }} Upvotes</span>
                 </div>
             </div>
