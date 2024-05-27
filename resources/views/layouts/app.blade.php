@@ -34,6 +34,10 @@
             @include('layouts.topics-sidebar')
         @endif
 
+        @if (isset($showForumSidebar) && $showForumSidebar)
+            @include('layouts.forum-sidebar')
+        @endif
+
         <!-- Main Content -->
         <div class="flex-grow">
             @yield('content')

@@ -30,5 +30,11 @@
             <a href="{{ route('forum.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Ask a Question</a>
         </div>
     </div>
+
+    @php
+        $showSidebar = false;
+        $showTopicsSidebar = false;
+        $showForumSidebar = true;
+    @endphp
 @endsection
 

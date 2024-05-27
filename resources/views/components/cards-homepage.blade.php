@@ -1,6 +1,6 @@
 <div id="cards">
     <!-- Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-0 px-4">
         <!-- Card 1: Structure of the Bible -->
         <a href="/topics/1/chapters/1" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
