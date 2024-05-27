@@ -14,13 +14,28 @@ class ChapterController extends Controller
         $chapter = Chapter::findOrFail($chapterId);
         $currentChapterId = $chapter->id;
 
+        // Get the topic and chapter names
+        $topic = $chapter->topic;
+        $topicName = str_replace(' ', '_', strtolower($topic->title));
+        $chapterName = str_replace(' ', '_', strtolower($chapter->title));
+
+        // Construct the path to the markdown file
+        $markdownPath = resource_path("markdown/en/{$topicName}/{$chapterName}.md");
+
+        // Check if the markdown file exists
+        if (!File::exists($markdownPath)) {
+            // Handle case where markdown file doesn't exist
+            abort(404, 'Markdown file not found.');
+        }
+
+        // Read the markdown content
+        $markdownContent = File::get($markdownPath);
+
+        // Parse markdown content to HTML
         $parsedown = new Parsedown();
-        $markdownContent = File::get(resource_path("markdown/en/structure_of_the_bible/introduction.md"));
         $htmlContent = $parsedown->text($markdownContent);
 
-        $topic = $chapter->topic;
-        $topics = Topic::all();
-
+        // Define previous and next chapters
         $previousChapter = Chapter::where('topic_id', $topicId)
             ->where('id', '<', $chapterId)
             ->orderBy('id', 'desc')
@@ -40,6 +55,5 @@ class ChapterController extends Controller
 
         return view('chapters.show', compact('topic', 'chapter', 'htmlContent', 'previousChapter', 'nextChapter', 'currentChapterId'));
     }
-
 
 }

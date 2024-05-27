@@ -32,7 +32,7 @@
         <!-- Sidebar Footer (Optional) -->
         <div class="flex items-center justify-center py-5">
             <!-- Footer content goes here -->
-            <h1 class="text-white">Sidebar Footer</h1>
+            <h1 class="text-white">Copyright &copy; 2024 Scriptu</h1>
         </div>
     </div>
 </aside>
