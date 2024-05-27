@@ -15,7 +15,7 @@
 
         <h1 class="text-3xl font-bold mb-4">{{ $question->title }}</h1>
         <p>{{ $question->content }}</p>
-        <p class="text-gray-600">Asked by {{ $question->user->name }}, {{ $question->created_at->diffForHumans() }}</p>
+        <p class="text-gray-600 mt-4">Asked by {{ $question->user->name }}, {{ $question->created_at->diffForHumans() }}</p>
 
         <!-- Upvote button for the question -->
         <div class="flex items-center mt-4">
@@ -32,8 +32,19 @@
                     </span>
                 </button>
             @endauth
-            <span class="ml-2">{{ $question->upvotes }} Upvotes</span>
+            <span class="ml-2">{{ $question->upvotes }}</span>
         </div>
+
+        <!-- Delete button for the question -->
+        @auth
+            @if(Auth::id() === $question->user_id || Auth::user()->is_admin)
+                <form action="{{ route('forum.question.destroy', $question) }}" method="POST" class="mt-4">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">Delete</button>
+                </form>
+            @endif
+        @endauth
 
         <h2 class="text-2xl font-bold mt-8">Answers</h2>
         @foreach($question->answers as $answer)
@@ -56,20 +67,24 @@
                             </span>
                         </button>
                     @endauth
-                    <span class="ml-2">{{ $answer->upvotes }} Upvotes</span>
+                    <span class="ml-2">{{ $answer->upvotes }}</span>
                 </div>
             </div>
         @endforeach
 
         @auth
-            <form action="{{ route('forum.answer', $question) }}" method="post" class="mt-8">
-                @csrf
-                <div class="mb-4">
-                    <label for="content" class="block text-sm font-medium text-gray-700">Your Answer:</label>
-                    <textarea name="content" id="content" rows="5" class="mt-1 p-2 border border-gray-300 rounded-md w-full"></textarea>
-                </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit Answer</button>
-            </form>
+            @if(Auth::id() !== $question->user_id)
+                <form action="{{ route('forum.answer', $question) }}" method="post" class="mt-8">
+                    @csrf
+                    <div class="mb-4">
+                        <label for="content" class="block text-sm font-medium text-gray-700">Your Answer:</label>
+                        <textarea name="content" id="content" rows="5" class="mt-1 p-2 border border-gray-300 rounded-md w-full"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit Answer</button>
+                </form>
+            @else
+                <p class="mt-8 text-gray-600">You cannot answer your own question. :))</p>
+            @endif
         @else
             <p class="mt-8">Please <a href="{{ route('login') }}" class="text-blue-500 font-bold">login</a> to post an answer.</p>
         @endauth

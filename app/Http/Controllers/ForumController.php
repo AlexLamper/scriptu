@@ -26,6 +26,17 @@ class ForumController extends Controller
         return view('forum.create');
     }
 
+    public function destroy(Question $question)
+    {
+        if (Auth::id() !== $question->user_id && !Auth::user()->is_admin) {
+            return back()->with('error', 'You do not have permission to delete this question.');
+        }
+
+        $question->delete();
+        return redirect()->route('forum.index')->with('success', 'Question deleted successfully.');
+    }
+
+
     public function store(Request $request)
     {
         $request->validate([
