@@ -78,5 +78,4 @@ class ForumController extends Controller
         }
         return back()->with('error', 'You have already upvoted this answer.');
     }
-
 }
