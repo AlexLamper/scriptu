@@ -5,7 +5,7 @@
         <a href="/topics/1/chapters/1" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
                 <!-- Top Div with Image -->
-                <div class="inset-0 flex">
+                <div class="h-48 overflow-hidden flex">
                     <img src="images/courses/cover1.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
@@ -27,7 +27,7 @@
         <a href="/topics/2/chapters/4" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
                 <!-- Top Div with Image -->
-                <div class="inset-0 flex">
+                <div class="h-48 overflow-hidden flex">
                     <img src="images/courses/cover2.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
@@ -49,7 +49,7 @@
         <a href="/topics/3/chapters/7" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
                 <!-- Top Div with Image -->
-                <div class="inset-0 flex">
+                <div class="h-48 overflow-hidden flex">
                     <img src="images/courses/cover3.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
@@ -71,7 +71,7 @@
         <a href="/topics/4/chapters/9" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
                 <!-- Top Div with Image -->
-                <div class="inset-0 flex">
+                <div class="h-48 overflow-hidden flex">
                     <img src="images/courses/cover4.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
@@ -93,7 +93,7 @@
         <a href="/topics/5/chapters/11" class="border border-gray-300 rounded-3xl overflow-hidden hover:shadow-lg transition duration-300 ease-in-out card max-w-full">
             <div class="relative h-full">
                 <!-- Top Div with Image -->
-                <div class="inset-0 flex">
+                <div class="h-48 overflow-hidden flex">
                     <img src="images/courses/cover5.jpg" alt="Course Image" class="w-full h-full object-cover" />
                 </div>
                 <!-- Bottom Div with Text Content -->
