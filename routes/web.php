@@ -7,6 +7,10 @@ use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 
+Route::get('/500-error', function () {
+    throw new \Exception('Intentional Exception to trigger 500 error');
+});
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
