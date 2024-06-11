@@ -1,1 +1,2 @@
 - Make the login and registration page light mode instead of dark.
+- Add contact page with question/feedback input system.

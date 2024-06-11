@@ -7,6 +7,8 @@
     <title>@yield('title', config('app.name', 'Scriptu'))</title>
     <!-- Fonts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Link to the compiled CSS file -->
+    <link href="{{ asset('build.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -47,5 +49,7 @@
 
 <!-- Footer -->
 @include('components.footer')
+<!-- Link to the compiled JavaScript file -->
+<script src="{{ asset('build/assets/app-CrG2wnyX.js') }}"></script>
 </body>
 </html>
